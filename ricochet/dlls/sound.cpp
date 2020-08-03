@@ -28,6 +28,10 @@
 #include <ctype.h>
 #endif
 
+#include <algorithm>
+
+using namespace std;
+
 static char *memfgets( byte *pMemFile, int fileSize, int &filePos, char *pBuffer, int bufferSize );
 
 

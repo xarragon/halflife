@@ -2,6 +2,10 @@
 
 #include <memory.h>
 
+#include <algorithm>
+
+using namespace std;
+
 #include "hud.h"
 #include "cl_util.h"
 #include "const.h"

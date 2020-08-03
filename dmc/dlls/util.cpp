@@ -31,6 +31,10 @@
 #include "weapons.h"
 #include "gamerules.h"
 
+#include <algorithm>
+
+using namespace std;
+
 /*
 =====================
 UTIL_WeaponTimeBase

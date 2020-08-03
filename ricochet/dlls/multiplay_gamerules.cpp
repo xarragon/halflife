@@ -31,6 +31,10 @@
 #include <ctype.h>
 #endif
 
+#include <algorithm>
+
+using namespace std;
+
 extern DLL_GLOBAL CGameRules	*g_pGameRules;
 extern DLL_GLOBAL BOOL	g_fGameOver;
 extern int gmsgDeathMsg;	// client dll messages

@@ -30,6 +30,10 @@
 #include "cbase.h"
 #include "player.h"
 
+#include <algorithm>
+
+using namespace std;
+
 class CRuleEntity : public CBaseEntity
 {
 public:

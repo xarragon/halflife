@@ -31,6 +31,10 @@
 #include "gamerules.h"
 #include "quake_gun.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern CGraph	WorldGraph;
 extern int gEvilImpulse101;
 

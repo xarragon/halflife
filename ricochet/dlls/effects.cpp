@@ -23,6 +23,10 @@
 #include "func_break.h"
 #include "shake.h"
 
+#include <algorithm>
+
+using namespace std;
+
 #define	SF_GIBSHOOTER_REPEATABLE	1 // allows a gibshooter to be refired
 
 #define SF_FUNNEL_REVERSE			1 // funnel effect repels particles instead of attracting them.

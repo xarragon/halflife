@@ -31,6 +31,10 @@
 #include "../com_weapons.h"
 #include "../demo.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern globalvars_t *gpGlobals;
 extern int g_iUser1;
 

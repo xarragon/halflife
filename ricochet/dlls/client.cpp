@@ -44,6 +44,10 @@
 #include <ctype.h>
 #endif
 
+#include <algorithm>
+
+using namespace std;
+
 edict_t *EntSelectSpawnPoint( CBaseEntity *pPlayer );
 
 #include "discwar.h"
@@ -1545,9 +1549,9 @@ int GetWeaponData( struct edict_s *player, struct weapon_data_s *info )
 						item->m_iId						= II.iId;
 						item->m_iClip					= pl->m_rgAmmo[gun->m_iPrimaryAmmoType];//gun->m_iClip;
 
-						item->m_flTimeWeaponIdle		= max( gun->m_flTimeWeaponIdle, -0.001 );
-						item->m_flNextPrimaryAttack		= max( gun->m_flNextPrimaryAttack, -0.001 );
-						item->m_flNextSecondaryAttack	= max( gun->m_flNextSecondaryAttack, -0.001 );
+						item->m_flTimeWeaponIdle		= max( gun->m_flTimeWeaponIdle, -0.001f );
+						item->m_flNextPrimaryAttack		= max( gun->m_flNextPrimaryAttack, -0.001f );
+						item->m_flNextSecondaryAttack	= max( gun->m_flNextSecondaryAttack, -0.001f );
 						item->m_fInReload				= gun->m_fInReload;
 					}
 				}

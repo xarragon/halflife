@@ -22,6 +22,10 @@
 #include "nodes.h"
 #include "effects.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern DLL_GLOBAL int		g_iSkillLevel;
 
 #define SF_WAITFORTRIGGER	(0x04 | 0x40) // UNDONE: Fix!

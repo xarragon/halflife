@@ -7,6 +7,8 @@
 
 // Triangle rendering, if any
 
+#include <algorithm>
+
 #include "hud.h"
 #include "cl_util.h"
 

@@ -34,6 +34,10 @@
 #include "soundent.h"
 #include "gamerules.h"
 
+#include <algorithm>
+
+using namespace std;
+
 #define MONSTER_CUT_CORNER_DIST		8 // 8 means the monster's bounding box is contained without the box of the node in WC
 
 
@@ -1989,7 +1993,7 @@ void CBaseMonster::MoveExecute( CBaseEntity *pTargetEnt, const Vector &vecDir, f
 	while (flTotal > 0.001)
 	{
 		// don't walk more than 16 units or stairs stop working
-		flStep = min( 16.0, flTotal );
+		flStep = min( 16.0f, flTotal );
 		UTIL_MoveToOrigin ( ENT(pev), m_Route[ m_iRouteIndex ].vecLocation, flStep, MOVE_NORMAL );
 		flTotal -= flStep;
 	}

@@ -16,6 +16,11 @@
 //  hud_msg.cpp
 //
 
+#include <algorithm>
+
+using namespace std;
+
+
 #include "hud.h"
 #include "cl_util.h"
 #include "parsemsg.h"

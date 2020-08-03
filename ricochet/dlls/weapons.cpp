@@ -31,6 +31,10 @@
 #include "decals.h"
 #include "gamerules.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern CGraph	WorldGraph;
 extern int gEvilImpulse101;
 

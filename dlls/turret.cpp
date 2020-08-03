@@ -31,6 +31,10 @@
 #include "weapons.h"
 #include "effects.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern Vector VecBModelOrigin( entvars_t* pevBModel );
 
 #define TURRET_SHOTS	2

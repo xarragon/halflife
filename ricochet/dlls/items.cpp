@@ -29,6 +29,10 @@
 #include "items.h"
 #include "gamerules.h"
 
+#include <algorithm>
+
+using namespace std;
+
 extern int gmsgItemPickup;
 
 class CWorldItem : public CBaseEntity
@@ -224,7 +228,7 @@ class CItemBattery : public CItem
 			char szcharge[64];
 
 			pPlayer->pev->armorvalue += gSkillData.batteryCapacity;
-			pPlayer->pev->armorvalue = min(pPlayer->pev->armorvalue, MAX_NORMAL_BATTERY);
+			pPlayer->pev->armorvalue = min(pPlayer->pev->armorvalue, float(MAX_NORMAL_BATTERY));
 
 			EMIT_SOUND( pPlayer->edict(), CHAN_ITEM, "items/gunpickup2.wav", 1, ATTN_NORM );
 

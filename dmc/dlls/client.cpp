@@ -41,6 +41,10 @@
 #include <ctype.h> // isspace,isprint
 #endif
 
+#include <algorithm>
+
+using namespace std;
+
 extern DLL_GLOBAL ULONG		g_ulModelIndexPlayer;
 extern DLL_GLOBAL BOOL		g_fGameOver;
 extern DLL_GLOBAL int		g_iSkillLevel;
@@ -1553,9 +1557,9 @@ int GetWeaponData( struct edict_s *player, struct weapon_data_s *info )
 						item->m_iId						= II.iId;
 						item->m_iClip					= gun->m_iClip;
 
-						item->m_flTimeWeaponIdle		= max( gun->m_flTimeWeaponIdle, -0.001 );
-						item->m_flNextPrimaryAttack		= max( gun->m_flNextPrimaryAttack, -0.001 );
-						item->m_flNextSecondaryAttack	= max( gun->m_flNextSecondaryAttack, -0.001 );
+						item->m_flTimeWeaponIdle		= max( gun->m_flTimeWeaponIdle, -0.001f );
+						item->m_flNextPrimaryAttack		= max( gun->m_flNextPrimaryAttack, -0.001f );
+						item->m_flNextSecondaryAttack	= max( gun->m_flNextSecondaryAttack, -0.001f );
 						item->m_fInReload				= gun->m_fInReload;
 					}
 				}

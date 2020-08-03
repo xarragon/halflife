@@ -5,7 +5,10 @@
 #pragma once
 #endif
 
+#include <algorithm>
 #include <vector>
+
+using namespace std;
 
 class CCoreTriangleEffect;
 

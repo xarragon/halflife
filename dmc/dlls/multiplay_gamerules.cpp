@@ -30,6 +30,10 @@
 #include <ctype.h>
 #endif
 
+#include <algorithm>
+
+using namespace std;
+
 #define INTERMISSION_TIME		60
 
 #if defined( THREEWAVE )
