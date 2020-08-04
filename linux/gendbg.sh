@@ -2,13 +2,13 @@
 
 UNAME=`uname`
 if [ "$UNAME" == "Darwin" ]; then
-	p4 edit $1.dSYM/...
+	#p4 edit $1.dSYM/...
 	dsymutil $1
-	p4 revert -a $1.dSYM/...
+	#p4 revert -a $1.dSYM/...
 	exit 0;
 fi
 
-OBJCOPY=/valve/bin/objcopy
+OBJCOPY=objcopy
 
 function usage {
 	echo "$0 /path/to/input/file [-o /path/to/output/file ]"
@@ -45,9 +45,9 @@ if [ "$OUTFILEDIR" != "$INFILEDIR" ]; then
 fi
 
 pushd "$INFILEDIR"
-p4 edit "$OUTFILE"
+#p4 edit "$OUTFILE"
 $OBJCOPY "$INFILE" "$OUTFILE"
 $OBJCOPY --add-gnu-debuglink="$OUTFILE" "$INFILE"
-p4 revert -a "$OUTFILE"
+#p4 revert -a "$OUTFILE"
 popd
 
